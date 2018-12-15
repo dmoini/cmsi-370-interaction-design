@@ -1,0 +1,49 @@
+$(() => {
+  let $log = $(".event-log")
+  let logEvent = (message) => {
+    $log.text($log.text() + message + "\n")
+        .scrollTop($log[0].scrollHeight - $log.height())
+  }
+
+  $(".edit-in-place").inPlaceEditor({
+    change: function () {
+      logEvent("In-place editor: " + $(this).text())
+    }
+  })
+
+  $("#demo-select").dropdownSelect({
+    initial: "Catch the",
+
+    options: [
+      "Catch the",
+      "tiger",
+      "by the",
+      $.fn.dropdownSelect.DIVIDER,
+      "toe"
+    ],
+
+    change: function (oldSelection, newSelection) {
+      logEvent("Dropdown select: Changed from '" + oldSelection + "' to '" + newSelection + "'")
+    }
+  })
+
+  $(".swivel-this").swivel({
+    change: function (oldAngle, newAngle) {
+      logEvent("Swivel: Swiveled from " + oldAngle + " to " + newAngle)
+    }
+  })
+
+  $('.slider').slide({
+    change: function (percentage, currentX) {
+      logEvent(`Slider is at ${percentage}% and ${currentX}px`)
+      updateRgb(percentage)
+    }
+  })
+
+  const updateRgb = percentage => {
+    let greenValue = Math.floor(percentage / 100 * 255)
+    $('.rgb-container').css({
+      'background-color': `rgb(0, ${greenValue}, 0)`
+    })
+  }
+})

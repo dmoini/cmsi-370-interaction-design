@@ -1,0 +1,144 @@
+<!doctype html>
+
+<!-- A demonstration page for some hand-rolled jQuery plugins. -->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>jQuery Plugin Demos</title>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+
+    <!-- Sometimes, a plugin needs "companion" CSS.  That is fine. -->
+    <link rel="stylesheet" href="jquery.in-place-editor.css">
+    <link rel="stylesheet" href="jquery.swivel.css">
+    <link rel="stylesheet" href="jquery.slider.css">
+
+    <!-- And the page has its own styles. -->
+    <link rel="stylesheet" href="plugin-demo.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1>jQuery Plugin Demonstration Gallery</h1>
+
+          <p class="lead">This page demonstrates a collection of user interface components implemented as jQuery
+            plugins. They all include callback functionality, which can be seen in the “Event Log” section of
+            this page.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8 col-xs-12">
+          <div class="row">
+            <div class="col-xs-12">
+              <h2>In-Place Editor</h2>
+
+              <p>This plugin makes any element's text editable.</p>
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h5 class="panel-title">Samples</h5>
+                </div>
+                <div class="panel-body">
+                  <p class="edit-in-place">Mouse over and click on this to see it at work.</p>
+
+                  <h3 class="edit-in-place">The plugin mimics the original element's font.</h3>
+
+                  <p><em class="edit-in-place">Look at the console to see the callback in action.</em></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12">
+              <h2>Hand-Styled <code>select</code> Workalike</h2>
+
+              <p>The standard Bootstrap-styled <code>select</code> element may not be to everyone's liking:</p>
+
+              <p>
+                <select class="form-control">
+                  <option>Eenie</option>
+                  <option>Meenie</option>
+                  <option>Mynie</option>
+                  <option>Moe</option>
+                </select>
+              </p>
+
+              <p>This plugin gives it a different look but similar functionality:</p>
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h5 class="panel-title">Sample</h5>
+                </div>
+                <div class="panel-body">
+                  <div id="demo-select"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12">
+              <h2>“Swivel” Control</h2>
+
+              <p>This plugin demonstrates low-level mouse event handling.  We leave what it controls or
+              how it is used to your imagination.</p>
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h5 class="panel-title">Samples</h5>
+                </div>
+                <div class="panel-body">
+                  <div><p class="swivel-this">&nbsp;</p></div>
+
+                  <div><p class="swivel-this">And it’s a regular element</p></div>
+
+                  <div><p class="swivel-this">So you can put text inside</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12">
+              <h2>Slider Control</h2>
+              <p>This plugin is a slider that returns a percentage value denoting the position of the slider handle. Here, I use it to adjust RGB values from changing a black container to green.</p>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h5 class="panel-title">Sample</h5>
+                </div>
+                <div class="panel-body">
+                  <div class="slider-bar">
+                    <div class="slider"></div>
+                  </div>
+                  <br>
+                  <div class="rgb-container text-center">You can read this now. :)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-xs-12">
+          <h3>Event Log</h3>
+
+          <pre class="event-log"></pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- We wrap up by loading up jQuery, then Bootstrap, then our plugins, then finally we actually use them. -->
+    <script src="//code.jquery.com/jquery-latest.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+    <script src="jquery.in-place-editor.js"></script>
+    <script src="jquery.dropdown-select.js"></script>
+    <script src="jquery.swivel.js"></script>
+    <script src="jquery.slider.js"></script>
+    <script src="plugin-demo.js"></script>
+  </body>
+</html>

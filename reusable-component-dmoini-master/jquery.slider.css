@@ -1,0 +1,22 @@
+:root {
+    --size: 15px;
+  }
+
+.slider-bar {
+    background-color: #5e5e5e;
+    border-radius: 25px;
+    height: 15px;
+    width: 300px;
+}
+  
+.slider {
+    position: relative;
+    background-color: white;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 100px;
+}
+
+.slider:active {
+    background-color: rgb(226, 226, 226);
+}
