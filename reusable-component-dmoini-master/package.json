@@ -91,5 +91,8 @@
         "never"
       ]
     }
+  },
+  "dependencies": {
+    "is-my-json-valid": "^2.20.0"
   }
 }
