@@ -95,5 +95,8 @@
         "never"
       ]
     }
+  },
+  "dependencies": {
+    "minimist": "^1.2.5"
   }
 }

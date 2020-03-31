@@ -93,6 +93,8 @@
     }
   },
   "dependencies": {
-    "is-my-json-valid": "^2.20.0"
+    "acorn": "^7.1.1",
+    "is-my-json-valid": "^2.20.0",
+    "minimist": "^1.2.5"
   }
 }
